@@ -1,0 +1,167 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="José Juan, José Francisco" />
+    <meta name="keywords" content="cesta compra comparativa económica barata estándar caro barato comunidad provincia" />
+    <meta name="description" content="Página web de la cesta de la compra" />
+    <title>La lista de la compra</title>
+        
+    <link rel="stylesheet" href="tienda.css" type="text/css" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    
+    <!--[if lt IE 7]><style type="text/css" media="screen">@import "tiendaie6.css";</style><![endif]-->
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+    <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/lalistadelacompra.js"></script>
+
+</head>
+
+<body onload="initialize();">		
+	
+<!-- CONTENEDOR -->
+
+<div id="contenedor">
+    
+        
+    <div id="cabecera"> 
+    	
+    	<h1>La lista de la <strong>compra</strong></h1>
+        
+    </div>
+
+    <div id="filtro_1"> 
+    	
+    	<form id="formulario_1" action="">
+
+    	    <label for="formulario_ciudad">Ciudad</label>
+            <select id="IdCiudad" name="IdCiudad" onchange="changeMap(this.value, this.options[this.selectedIndex].text);">
+	    <option selected="selected" value="0">Todas las ciudades</option>
+	    <option value="2">Albacete</option>
+	    <option value="3">Alicante/Alacant</option>
+	    <option value="4">Almería</option>
+	    <option value="5">Ávila</option>
+	    <option value="6">Badajoz</option>
+	    <option value="8">Barcelona</option>
+	    <option value="48">Bilbao</option>
+	    <option value="9">Burgos</option>
+	    <option value="10">Cáceres</option>
+	    <option value="11">Cádiz</option>
+	    <option value="12">Castellón de la Plana</option>
+	    <option value="51">Ceuta</option>
+	    <option value="13">Ciudad Real</option>
+	    <option value="14">Córdoba</option>
+	    <option value="15">Coruña (A)</option>
+	    <option value="16">Cuenca</option>
+	    <option value="20">Donostia-San Sebastián</option>
+	    <option value="53">Gijón</option>
+	    <option value="17">Girona</option>
+	    <option value="18">Granada</option>
+	    <option value="19">Guadalajara</option>
+	    <option value="21">Huelva</option>
+	    <option value="22">Huesca</option>
+	    <option value="23">Jaén</option>
+	    <option value="54">Jerez de la Frontera</option>
+	    <option value="24">León</option>
+	    <option value="25">Lleida</option>
+	    <option value="26">Logroño</option>
+	    <option value="27">Lugo</option>
+	    <option value="28">Madrid</option>
+	    <option value="29">Málaga</option>
+	    <option value="52">Melilla</option>
+	    <option value="30">Murcia</option>
+	    <option value="32">Ourense</option>
+	    <option value="33">Oviedo</option>
+	    <option value="34">Palencia</option>
+	    <option value="7">Palma de Mallorca</option>
+	    <option value="35">Palmas de Gran Canaria</option>
+	    <option value="31">Pamplona/Iruña</option>
+	    <option value="36">Pontevedra</option>
+	    <option value="37">Salamanca</option>
+	    <option value="38">Santa Cruz de Tenerife</option>
+	    <option value="39">Santander</option>
+	    <option value="40">Segovia</option>
+	    <option value="41">Sevilla</option>
+	    <option value="42">Soria</option>
+	    <option value="56">Talavera de la Reina</option>
+	    <option value="43">Tarragona</option>
+	    <option value="44">Teruel</option>
+	    <option value="45">Toledo</option>
+	    <option value="46">Valencia</option>
+	    <option value="47">Valladolid</option>
+	    <option value="55">Vigo</option>
+	    <option value="1">Vitoria-Gasteiz</option>
+	    <option value="49">Zamora</option>
+	    <option value="50">Zaragoza</option>
+	    </select>
+
+    	    <label for="formulario_tiempo">Período de tiempo</label>
+	    <select id="IdTrimestre" name="IdTrimestre" onchange="changeQuery(this.value);changeDataMotionChart(document.getElementById('IdIndicador').value, document.getElementById('IdCiudad').value, this.value);">
+	    <option selected="selected" value="1/1/2011">Primer trimestre 2011</option>
+	    <option value="10/1/2010">Cuarto trimestre 2010</option>
+	    <option value="7/1/2010">Tercer trimestre 2010</option>
+	    <option value="4/1/2010">Segundo trimestre 2010</option>
+	    <option value="1/1/2010">Primer trimestre 2010</option>
+	    <option value="10/1/2009">Cuarto trimestre 2009</option>
+	    <option value="7/1/2009">Tercer trimestre 2009</option>
+	    <option value="4/1/2009">Segundo trimestre 2009</option>
+	    <option value="1/1/2009">Primer trimestre 2009</option>
+	    </select>
+    	</form>
+        
+    </div>
+  
+    <div id="cuerpo"> 
+        
+        <div id="mapa">  
+	    <div id="map_canvas"></div>
+        </div>
+        
+        <div id="detalle">  
+        </div>
+
+	<div id="info_1">
+	Los índices de precios se establecen sobre base <span class="verde">100</span>, por lo tanto el 
+	precio más bajo tendrá un valor de <span class="verde">100</span>.<br/> 
+	Por ejemplo, un índice de <span class="rojo">105</span> significa que es un <span class="rojo">5%</span> más caro respecto al 
+	producto más barato.<br/>
+	</div>   
+    	
+    </div>
+
+    <div id="filtro_2"> 
+	<form id="formulario_2" action="">
+	<label for='formulario_indicador'>Indicador</label>
+  	<select id="IdIndicador" name="IdIndicador" onchange="changeDataMotionChart(this.value, document.getElementById('IdCiudad').value, document.getElementById('IdTrimestre').value);">
+  	<option selected="selected" value="3">Total alimentación</option>
+  	<option value="4">Alimentación envasada (cesta estándar)</option>
+  	<option value="6">Alimentación envasada (cesta económica)</option>
+  	<option value="7">Frutas y verduras</option>
+  	<option value="8">Carnes</option>
+  	<option value="9">Pescado</option>
+  	<option value="10">Droguería (cesta estándar)</option>
+  	<option value="12">Droguería (cesta económica)</option>
+  	</select>
+	</form>
+    </div>
+    <div id="visualization_motion"></div> 
+
+    <div id="info_2">
+    En este gráfico se pueden consultar las provincias y/o establecimientos con los precios más caros y más económicos, para cada familia de productos.<br/>
+    <a href="http://www.observatorioprecios.es" target="_blank">Datos obtenidos del Ministerio de Industria, Turismo y Comercio.</a>
+    </div>
+</div>
+    
+<div id="pie">
+	<a href="http://live.abredatos.es/teams/38" target="_blank">Desafío AbreDatos 2011</a>
+	 |   	
+	<a href="#">XHTML</a>
+   	 | 
+   	<a href="#">CSS</a>
+   	 |
+  	 
+</div>
+
+</body>
+</html>

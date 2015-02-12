@@ -13,6 +13,16 @@ Se otorga índice 100 al establecimiento (formato o ciudad) cuyo promedio ponder
 
 Datos obtenidos del Ministerio de Industria, Turismo y Comercio (http://www.observatorioprecios.es). 
 
+## Recursos utilizados
+
+Recursos utilizados para el desarrollo del proyecto:
+
+	- Google Fusion Tables
+	- Google Maps API
+	- Google Visualization API
+	- PHP
+	- Javascript
+
 ## ¿Qué es el Desafío AbreDatos 2011?
 El **Desafío AbreDatos 2011**, es un concurso de desarrollo exprés de servicios tecnológicos al ciudadano basados en el uso de datos públicos. El objetivo del concurso es generar debate en torno a la necesidad de que los organismos públicos proporcionen sus datos de forma accesible para permitir su uso y reutilización por parte de los ciudadanos. El concurso tuvo lugar el fin de semana del 7 y 8 de mayo de 2011. Los participantes tuvieron que desarrollar sus aplicaciones desde cero, organizados en equipos de máximo 4 personas, en **48 horas**.
 

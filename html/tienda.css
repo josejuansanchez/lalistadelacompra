@@ -1,0 +1,301 @@
+body { color: black; background: white; font-size: 1.0em; margin: 0; padding: 0; text-align: center; }
+
+div, h1, h2, h3, h4, h5, h6 { margin: 0px; }
+
+div, h1, h2, h3, h4, h5, h6 { font-family: Arial, sans-serif; margin: 0px; }
+
+img { border: 0px; }
+
+.oculto { display: none; }
+
+/* ******************** ESTRUCTURA ******************** */
+
+#contenedor {      
+    width: 100%; 
+        
+    margin: 0;
+    padding: 0;    
+}
+
+#cabecera {    
+    width: 100%;
+    
+    margin: 0 auto;
+    padding: 20px 0 20px 0;
+    
+    color: white;
+    background: #03567e;
+}
+
+#cabecera h1 {
+    width: 930px;   
+         
+    color: white;
+    background: #03567e url("imagenes/ico_cesta.png") left top no-repeat;
+    
+    margin: 0 auto;
+    padding: 0 0 0 40px;
+    
+    font-size: 1.75em;
+    text-align: left;
+    font-weight: normal;
+}
+
+#filtro_1 {
+    width: 100%;
+    
+    margin: 0;
+    padding: 20px 0 65px 0;
+    
+    color: white;
+    background: #608aa3 url("imagenes/sombra.png") bottom repeat-x;   
+}
+
+#filtro_2 {
+    clear: both;
+
+    width: 100%;
+    
+    margin: 0;
+    padding: 20px 0 65px 0;
+    
+    color: white;
+    background: #608aa3 url("imagenes/sombra.png") bottom repeat-x;   
+}
+
+#formulario_1 {
+    width: 970px;
+    
+    color: white;
+    background: none;
+    
+    margin: 0 auto;
+    padding: 0;
+    
+    text-align: left;
+}
+
+#formulario_2 {
+    width: 970px;
+    
+    color: white;
+    background: none;
+    
+    margin: 0 auto;
+    padding: 0;
+    
+    text-align: left;
+}
+
+#formulario label {
+    font-size: 1.1em;
+    
+    padding: 0 10px 0 0;
+}
+
+#formulario select {
+    width: 234px;
+    height: 31px;
+    
+    margin: 0 30px 0 0;
+    padding: 4px;
+    
+    background: white url("imagenes/fondo_input.png") top left no-repeat;
+    border: none;    
+}
+
+#cuerpo {
+    width: 970px;
+    
+    margin: 0 auto;
+    padding: 0;
+}
+
+#mapa {
+    float: left;
+    
+    width: 650px;
+    
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+
+#map_canvas { 
+    height: 500px; 
+    width:650px; 
+}
+
+#detalle {
+    float: left;
+    
+    width: 300px;
+    
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+#detalle h2 {
+    width: 241px;
+    min-height: 20px;
+    
+    margin: 0;
+    padding: 0 0 10px 0;
+    
+    color: white;
+    background: transparent url("imagenes/ciudad_fondo.png") bottom no-repeat;    
+    
+    font-size: 1.15em;
+    font-weight: normal;
+    text-transform: uppercase;
+    line-height: 1.4em;
+}
+
+#detalle h2 span {   
+   display: block;
+   
+   width: 221px;
+   ming-height: 8px;
+   
+   margin: 0;
+   padding: 10px 10px 0 10px;
+   
+   background: #608aa3 url("imagenes/ciudad_top.png") top no-repeat;
+}
+
+#detalle dl {
+    width: 241px;
+
+    margin: 0;
+    padding: 0;
+}
+
+#detalle dt {
+    float: left;
+    
+    width: 170px;
+    
+    margin: 15px 0 0 0;
+    padding: 2px 0 0 0;
+    
+    font-size: 0.9em;
+    text-align: left;
+}
+
+#detalle dt span {
+    font-size: 0.75em;
+    font-style: italic;
+}
+
+#detalle dd {
+    float: left;
+    
+    width: 70px;
+    
+    margin: 15px 0 0 0;
+    padding: 0;
+    
+    font-size: 1.0em;
+    text-align: right;
+}
+
+#info_1 {
+    clear: both;
+
+    padding: 2px 0 15px 0;
+
+    font-size: 0.8em;
+}
+
+#info_2 {
+    clear: both;
+
+    padding: 2px 0 15px 0;
+
+    font-size: 0.8em;
+}
+
+#info_2 a, info_2 a:hover, #info_2:active {
+    color: #000000;
+    text-decoration: none;
+}
+
+.caro {
+    float: left;    
+    
+    margin: 0;
+    padding: 0;
+    
+    height: 7px;
+    
+    background: transparent url("imagenes/ico_caro_fondo.png") right no-repeat;
+}
+
+.barato {
+    float: left;    
+    
+    margin: 0;
+    padding: 0;
+    
+    height: 7px;
+    
+    background: transparent url("imagenes/ico_barato_fondo.png") right no-repeat;
+}
+
+.media {
+    float: left;    
+    
+    margin: 0;
+    padding: 0;
+    
+    height: 7px;
+    
+    background: transparent url("imagenes/ico_media_fondo.png") right no-repeat;
+}
+
+.caro img, .barato img, .media img {
+    float: left;
+}
+
+.barra {
+    float: left;
+    
+    margin: 3px 0 0 0;
+    padding: 0;
+    
+    width: 238px;
+}
+
+.verde {
+    color: #3da110;
+}
+
+.rojo {
+    color: #ad1026;
+}
+
+.negro {
+    color: #000000;
+}
+
+#pie {  
+    clear: both;
+      
+    width: 100%;
+    
+    margin: 0 auto;
+    padding: 20px 0 65px 0;
+    
+    color: white;
+    background: #608aa3 url("imagenes/sombra.png") bottom repeat-x;   
+    
+    font-size: 0.75em;
+}
+
+#pie a{
+    color: white;
+}
+
+#pie a:hover, #pie a:active {
+    color: #03567e;
+    text-decoration: none;
+}
