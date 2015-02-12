@@ -2,6 +2,8 @@
 
 **«La lista de la compra»** fue un proyecto finalista del **Desafío AbreDatos 2011**, organizado por la Asociación Pro Bono Público, para promover la apertura de datos públicos en España.
 
+Web: http://josejuansanchez.org/lalistadelacompra/
+
 ## Descripción del proyecto
 Servicio que nos permite el estudio de la comparación de precios de tres grandes tipologías de comercio minorista (distribución organizada, comercio especializado y mercados municipales de abastos), sin valorar otras variables como pueden ser: atención al cliente, situación o variedad de la oferta.
 
